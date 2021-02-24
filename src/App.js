@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 const options =[
     {
         label: 'The color of Red',
@@ -31,18 +32,11 @@ const items = [
     }
 ];
 export default ()=>{
-    const [selected,setSelected] = useState(options[0])
-    const [showDropdown,setShowDropdown]=useState(true);
+    //const [selected,setSelected] = useState(options[0])
+   // const [showDropdown,setShowDropdown]=useState(true);
     return (
         <div>
-            <button onClick = {()=>setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-          {showDropdown?
-            <Dropdown 
-           selected = {selected}
-           OnSelectedChange = {setSelected}
-           options={options}
-           />:null
-          }
+          <Translate/>
         </div>
     );
 };
